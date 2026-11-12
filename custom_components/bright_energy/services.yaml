@@ -1,0 +1,16 @@
+reimport_history:
+  fields:
+    days:
+      required: true
+      default: 30
+      selector:
+        number:
+          min: 1
+          max: 400
+          unit_of_measurement: days
+          mode: box
+    config_entry_id:
+      required: false
+      selector:
+        config_entry:
+          integration: bright_energy

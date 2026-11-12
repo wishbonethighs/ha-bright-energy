@@ -1,0 +1,13 @@
+{
+  "domain": "bright_energy",
+  "name": "Bright Energy (Hildebrand Glow)",
+  "codeowners": ["@wishbonethighs"],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/wishbonethighs/ha-bright-energy",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/wishbonethighs/ha-bright-energy/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

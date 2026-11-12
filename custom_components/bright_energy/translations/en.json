@@ -1,0 +1,92 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sign in to Bright",
+        "description": "Use the email and password from the Bright app by Hildebrand. Your meters must already show data in Bright.",
+        "data": {
+          "username": "Email",
+          "password": "Password"
+        }
+      },
+      "site": {
+        "title": "Choose your property",
+        "data": {
+          "virtual_entity_id": "Property"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in to Bright again",
+        "description": "Bright no longer accepts the saved password for {username}. Enter the current one.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Bright rejected that email or password.",
+      "cannot_connect": "Could not reach Bright. Try again in a few minutes.",
+      "no_sites": "This Bright account has no meters set up yet.",
+      "wrong_account": "That login is for a different Bright account.",
+      "unknown": "Unexpected error. Check the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This property is already set up.",
+      "reauth_successful": "Signed in again."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bright Energy options",
+        "data": {
+          "recheck_days": "Days of recent history to re-check"
+        },
+        "data_description": {
+          "recheck_days": "Each update re-reads this many days so late or corrected readings are picked up. 7 is a good default."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "used_today": {
+        "name": "Used today"
+      },
+      "used_yesterday": {
+        "name": "Used yesterday"
+      },
+      "cost_today": {
+        "name": "Cost today"
+      },
+      "cost_yesterday": {
+        "name": "Cost yesterday"
+      },
+      "unit_rate": {
+        "name": "Unit rate"
+      },
+      "standing_charge": {
+        "name": "Standing charge"
+      },
+      "latest_reading": {
+        "name": "Latest reading"
+      }
+    }
+  },
+  "services": {
+    "reimport_history": {
+      "name": "Re-import history",
+      "description": "Re-read past readings from Bright and rebuild the Energy dashboard statistics from that point.",
+      "fields": {
+        "days": {
+          "name": "Days",
+          "description": "How many days back to re-read."
+        },
+        "config_entry_id": {
+          "name": "Property",
+          "description": "Which Bright property. Leave empty for all."
+        }
+      }
+    }
+  }
+}
