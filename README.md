@@ -21,13 +21,18 @@ usually 30 minutes to a day late. This integration:
 It only talks to `api.glowmarkt.com` and has no extra Python dependencies.
 A routine update is a handful of small web requests and database queries.
 
-## Install (HACS)
+## Install
 
-1. HACS → ⋮ → **Custom repositories** → add
-   `https://github.com/wishbonethighs/ha-bright-energy`, type **Integration**.
-2. Search HACS for **Bright Energy**, download it, and restart Home Assistant.
-3. Settings → Devices & services → **Add integration** → **Bright Energy**, and
-   sign in with your Bright email and password.
+**Home Assistant 2026.11 or newer (Marketplace):**
+
+1. Settings → **Marketplace** → ⋮ → **Add from link**, and enter
+   `https://github.com/wishbonethighs/ha-bright-energy`.
+2. Install **Bright Energy**; its setup starts straight away. Sign in with
+   your Bright email and password.
+
+**Home Assistant 2026.10 (HACS):** HACS → ⋮ → **Custom repositories** → add the
+link above as an **Integration**, download **Bright Energy**, restart, then
+Settings → Devices & services → **Add integration** → **Bright Energy**.
 
 ## Energy dashboard
 
